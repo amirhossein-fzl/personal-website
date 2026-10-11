@@ -1,0 +1,19 @@
+{
+    "eslint.useFlatConfig": true,
+    "i18n-ally.localesPaths": ["locales"],
+    "cSpell.words": [
+      "Amirhossein",
+      "defu",
+      "Fazli",
+      "gsap",
+      "llms",
+      "Nuxt",
+      "nuxtjs",
+      "nuxtrc",
+      "opencode",
+      "Reka",
+      "unjs",
+      "vitest"
+    ],
+    "editor.tabSize": 2
+}
