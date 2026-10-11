@@ -1,0 +1,25 @@
+{
+  "servers": {
+    "nuxt": {
+      "type": "http",
+      "url": "http://localhost:3000"
+    },
+    "plywright": {
+      "command": "pnpx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--headless"
+      ]
+    },
+    "devtools": {
+      "command": "pnpx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--slim",
+        "--headless"
+      ]
+    }
+  }
+}
