@@ -5,16 +5,16 @@ Read `DESIGN.md` first for tokens and hard rules. Component specs live in `desig
 ## 1. Home page (MOTION 7, DENSITY 4)
 Everything is reachable by scrolling alone. Each scene has a distinct layout family and a reason for its motion.
 
-| # | Scene | Layout family | Motion and its purpose |
-|---|---|---|---|
-| 1 | **Hero** | Asymmetric split: headline left (7 cols), duotone portrait right (5 cols, `--radius-sheet`) | One orchestrated load: headline reveals line by line (masked, 80ms stagger), portrait clip-path opens. Purpose: first impression. Then nothing loops. |
-| 2 | **Tech strip** | Single marquee (the only one on the page) | Slow linear drift, pauses on hover and under reduced motion. Purpose: breadth of stack without individual attention. |
-| 3 | **About** | Full-width statement, 3 to 4 sentences | Scroll-scrubbed word-by-word fill from muted to ink. Purpose: pacing the reader through the story. |
-| 4 | **Selected work** | Pinned horizontal pan, 4 to 5 projects (GSAP, `start: "top top"`, pin wrapper, scrub inner track) | Each project card slides in with its image parallax. Purpose: sequence. Below `lg`: vertical list with scroll-snap, no pinning. |
-| 5 | **Skills** | Bento, exactly as many cells as skill groups (5 cells: 2+3), cells vary (photo, tinted, plain, code snippet, stat) | Staggered reveal once; hover tilt (max 4 degrees) via `useMotionValue`. Purpose: feedback. |
-| 6 | **Experience** | Vertical timeline (a real sequence, numbering allowed) | Connector line draws with scroll; active node gets `--highlight` ring. Purpose: chronology. |
-| 7 | **Latest writing** | Magazine trio: 1 large + 2 stacked | Soft image parallax only. Purpose: connect to blog. |
-| 8 | **Contact + footer** | Oversized type CTA, one button | Magnetic button (Motion values, max 8px pull). Purpose: invite action. |
+| #   | Scene                | Layout family                                                                                                      | Motion and its purpose                                                                                                                                |
+| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Hero**             | Asymmetric split: headline left (7 cols), duotone portrait right (5 cols, `--radius-sheet`)                        | One orchestrated load: headline reveals line by line (masked, 80ms stagger), portrait clip-path opens. Purpose: first impression. Then nothing loops. |
+| 2   | **Tech strip**       | Single marquee (the only one on the page)                                                                          | Slow linear drift, pauses on hover and under reduced motion. Purpose: breadth of stack without individual attention.                                  |
+| 3   | **About**            | Full-width statement, 3 to 4 sentences                                                                             | Scroll-scrubbed word-by-word fill from muted to ink. Purpose: pacing the reader through the story.                                                    |
+| 4   | **Selected work**    | Pinned horizontal pan, 4 to 5 projects (GSAP, `start: "top top"`, pin wrapper, scrub inner track)                  | Each project card slides in with its image parallax. Purpose: sequence. Below `lg`: vertical list with scroll-snap, no pinning.                       |
+| 5   | **Skills**           | Bento, exactly as many cells as skill groups (5 cells: 2+3), cells vary (photo, tinted, plain, code snippet, stat) | Staggered reveal once; hover tilt (max 4 degrees) via `useMotionValue`. Purpose: feedback.                                                            |
+| 6   | **Experience**       | Vertical timeline (a real sequence, numbering allowed)                                                             | Connector line draws with scroll; active node gets `--highlight` ring. Purpose: chronology.                                                           |
+| 7   | **Latest writing**   | Magazine trio: 1 large + 2 stacked                                                                                 | Soft image parallax only. Purpose: connect to blog.                                                                                                   |
+| 8   | **Contact + footer** | Oversized type CTA, one button                                                                                     | Magnetic button (Motion values, max 8px pull). Purpose: invite action.                                                                                |
 
 Hero stack (max 4 text elements): optional one small label, headline (2 lines max), subtext (20 words max), CTAs (1 primary "Contact me", 1 secondary "View work"). No trust strip, no tagline under CTAs.
 Navigation: floating pill, hides on scroll down and returns on scroll up (state change feedback), active section indicator, thin scroll progress bar in `--primary`. Eyebrows: use at most on scenes 1, 4 and 7.

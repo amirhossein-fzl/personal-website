@@ -3,11 +3,11 @@
 Tokens come from `DESIGN.md`. All components: semantic color tokens, shape lock radii, visible focus ring, dark mode parity, reduced-motion fallback.
 
 ## Button
-| Variant | Use | Style |
-|---|---|---|
-| `primary` | One per view (e.g. "Contact me") | `bg-primary text-on-primary`, pill |
-| `secondary` | Supporting ("View work") | 1px `--line` border, `bg-surface`, hover `bg-surface-2` |
-| `ghost` | Tertiary, inline | Transparent, hover `bg-primary-soft` |
+| Variant     | Use                              | Style                                                   |
+| ----------- | -------------------------------- | ------------------------------------------------------- |
+| `primary`   | One per view (e.g. "Contact me") | `bg-primary text-on-primary`, pill                      |
+| `secondary` | Supporting ("View work")         | 1px `--line` border, `bg-surface`, hover `bg-surface-2` |
+| `ghost`     | Tertiary, inline                 | Transparent, hover `bg-primary-soft`                    |
 Sizes: `sm` 36px, `md` 44px, `lg` 52px (label 3 words max, single line).
 States: hover (bg shift + 120ms), active (`scale(.97)`), focus-visible (ring), disabled (50% opacity, `aria-disabled`), loading (label stays, inline progress dots, width locked).
 Magnetic effect only on the home contact CTA.
@@ -31,12 +31,12 @@ Icon button 44px, cycles Light, Dark, System with a spring icon swap. `aria-labe
 Media (`--radius-media`) on top, title (h3), one-line summary, stack chips (max 4), "View project" link. Hover: media scale 1.03, title underline draws. Compact: full-width stacked.
 
 ## Post card
-| Variant | Layout | Use |
-|---|---|---|
-| `featured` | Cover 16:10, h3, excerpt, amber "Featured" badge | Blog hero slots |
-| `standard` | Cover 16:9, category chip, h4, date and read time (mono) | Latest grids |
-| `compact` | 72px square thumb, title, meta | Related posts, category list layout |
-| `wide` | Cover left, text right (md+) | First Latest slot |
+| Variant    | Layout                                                   | Use                                 |
+| ---------- | -------------------------------------------------------- | ----------------------------------- |
+| `featured` | Cover 16:10, h3, excerpt, amber "Featured" badge         | Blog hero slots                     |
+| `standard` | Cover 16:9, category chip, h4, date and read time (mono) | Latest grids                        |
+| `compact`  | 72px square thumb, title, meta                           | Related posts, category list layout |
+| `wide`     | Cover left, text right (md+)                             | First Latest slot                   |
 Card = `--radius-card`, `bg-surface`, 1px `--line`; whole card is one link (`<a>` wraps title with stretched pseudo-element). Hover: cover scale 1.03 (480ms, `--ease-out`), border `--primary`. Loading: skeleton with the same cover ratio and text lines.
 
 ## Category section header
@@ -69,10 +69,10 @@ Bottom-center on compact, bottom-right on md+. Card radius, auto-dismiss 4s, pau
 Skeletons match final shapes, shimmer 1.4s (disabled under reduced motion). Empty states: one line of explanation and one action ("No posts in this category yet. Browse all posts.").
 
 ## Do and don't
-| Do | Don't |
-|---|---|
-| One primary button per view | Two primary CTAs with the same intent |
-| Use skeletons shaped like content | Use circular spinners for page loads |
-| Keep radius from the shape table | Use `rounded-lg` or arbitrary radii |
-| Use amber for featured, selected ring, text marker | Fill buttons or links with amber |
-| Mark the whole card as one link | Nest multiple links inside cards |
+| Do                                                 | Don't                                 |
+| -------------------------------------------------- | ------------------------------------- |
+| One primary button per view                        | Two primary CTAs with the same intent |
+| Use skeletons shaped like content                  | Use circular spinners for page loads  |
+| Keep radius from the shape table                   | Use `rounded-lg` or arbitrary radii   |
+| Use amber for featured, selected ring, text marker | Fill buttons or links with amber      |
+| Mark the whole card as one link                    | Nest multiple links inside cards      |
