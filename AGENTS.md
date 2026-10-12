@@ -122,14 +122,17 @@ For full technical detail, see `ARCHITECTURE.md`.
 ```
 
 Types:
-- **feat**: A new feature for the user (not a build script change).
-- **fix**: A bug fix for the user (not a build script fix).
-- **docs**: Documentation changes.
-- **style**: Formatting, missing semicolons, etc.
-- **refactor**: Refactoring production code.
-- **test**: Adding or refactoring tests; no production code change.
-- **perf**: Performance improvements.
-- **build**: Build config, dev tools, or other changes irrelevant to the user.
+
+| type     | description                                                       |
+| -------- | ----------------------------------------------------------------- |
+| feat     | A new feature for the user (not a build script change).           |
+| fix      | A bug fix for the user (not a build script fix).                  |
+| docs     | Documentation changes.                                            |
+| style    | Formatting, missing semicolons, etc.                              |
+| refactor | Refactoring production code.                                      |
+| test     | Adding or refactoring tests; no production code change.           |
+| perf     | Performance improvements.                                         |
+| build    | Build config, dev tools, or other changes irrelevant to the user. |
 
 ### 7.2 PR checklist
 - [ ] Changes are compatible with the project structure.
