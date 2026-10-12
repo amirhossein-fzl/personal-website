@@ -21,11 +21,10 @@ Name: **Blueprint Editorial**. Cobalt-and-ink canvas; amber works like a highlig
 5. **Reading comes first on content pages.** Blog and post pages trade spectacle for typography and rhythm.
 
 ## 2. Stack
-- Next.js (App Router, RSC by default), TypeScript, **Tailwind CSS v4** (`@tailwindcss/postcss`, no `tailwind.config.js`).
-- Motion: `motion/react` for UI/micro-interactions; **GSAP + ScrollTrigger** only for pinned/scrubbed homepage sections; CSS scroll-driven animations for simple progress bars.
-- Icons: `@phosphor-icons/react`, one family, `weight="regular"`, size 20. Never hand-draw SVG icons. No lucide.
+- Tailwind CSS v4.
+- Motion: GSAP.
+- Icons: `@phosphor-icons/vue`, one family, `weight="regular"`, size 20. Never hand-draw SVG icons. No lucide.
 - Fonts: `@fontsource-variable/bricolage-grotesque`, `@fontsource-variable/geist`, `@fontsource-variable/geist-mono` (self-hosted, `font-display: swap`).
-- Any component using scroll, pointer physics or Motion is an isolated `"use client"` leaf. Never track scroll or mouse position in `useState`; use `useMotionValue` / `useScroll` / `useTransform`.
 - Targets: evergreen modern browsers. Use `@supports (animation-timeline: scroll())` for CSS scroll-driven animation, with an IntersectionObserver fallback.
 
 ## 3. Tokens
